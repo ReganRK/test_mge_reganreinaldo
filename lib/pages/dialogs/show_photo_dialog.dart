@@ -15,6 +15,10 @@ class ShowPhotoDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return Dialog(
       child: Container(
+        constraints: BoxConstraints(
+          maxHeight: 450,
+        ),
+        margin: EdgeInsets.all(10),
         child: Column(
           children: [
             Text(
@@ -26,10 +30,11 @@ class ShowPhotoDialog extends StatelessWidget {
               errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 TextButton(
                   onPressed: () {
-                    
+                    Navigator.of(context).pop();
                   }, 
                   child: Text(
                     'OK'

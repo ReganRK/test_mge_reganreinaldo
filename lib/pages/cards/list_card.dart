@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:test_mge_reganreinaldo/pages/dialogs/delete_confirmation_dialog.dart';
 import 'package:test_mge_reganreinaldo/pages/dialogs/show_photo_dialog.dart';
 
 class ListCard extends StatelessWidget {
@@ -67,7 +68,18 @@ class ListCard extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {
-                
+                showDialog(
+                  context: context, 
+                  builder: (context) {
+                    return DeleteConfirmationDialog(
+                      title: title,
+                    );
+                  },
+                ).then((value) {
+                  if (value) {
+                    
+                  }
+                },);
               }, 
               icon: const Icon(Icons.delete)
             ),

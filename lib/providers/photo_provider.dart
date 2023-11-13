@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:test_mge_reganreinaldo/models/photos.dart';
 
